@@ -41,7 +41,11 @@
 
 Exemplo:
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ![Exemplo configuraçao NGINX(Server-Block)](imagens/server-block.png)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 2.9- Crie um link simbólico escrevendo o código na pasta sites-enabled: ln -s /etc/nginx/sites-available/solaris.com /etc/nginx/sites-enabled/
 
