@@ -87,7 +87,7 @@ Exemplo:
 ![Exemplo script](imagens/script1.png)
 ![Exemplo script](imagens/script2.png)
 
-4.3- Dê permissão de execução utilizando o comando chmod +x /usr/local/bin/monitor_nginx.py
+4.3- Dê permissão de execução utilizando o comando: chmod +x /usr/local/bin/monitor_nginx.py
 
 4.4- Crie um arquivo de log, utilize o comando: touch /var/log/meu_script.log
 
@@ -106,8 +106,6 @@ Exemplo:
 4.10- escreva no final do arquivo que foi aberto:
 
 ![Exemplo  crontab](imagens/crontab.png)
-
-foto arquivo do crontab -e
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
