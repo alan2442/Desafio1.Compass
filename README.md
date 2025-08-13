@@ -1,1 +1,81 @@
 # Desafio1.Compass
+
+# ✅ Objetivo: Criar um servidor Nginx que hospeda uma página HTML e é monitorado via Python, com alertas automáticos via Discord.
+
+
+# 📦 Tecnologias
+- Ubuntu (WSL ou nativo)
+- Nginx
+- Python 3 
+- Discord Webhooks
+- Cron
+
+# 1.Preparando o ambiente Linux -------------------------------
+1.1- Instalar o WSL + Ubuntu digitando no cmd o comando: wsl --install -d Ubuntu
+1.2- Execute o Ubuntu com o comando: wsl -d Ubuntu
+1.3- atualizar o sistema com os comandos: apt-get update && apt-get upgrade
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+# 2.Configura o servidor web NGINX ----------------------------
+2.1- Instale o Nginx digitando o comando: apt-get install nginx -y
+2.2- Verifique se o Nginx está rodando escrevendo o comando: systemctl status nginx
+2.3- Verifique seu ip(Exemplo: 172.31.93.49) digitando: ip a
+2.4- para confirmar abra o navegador e digite seu endereço ip na barra de navegação para ver se aparece a pagina do nginx
+2.5- Crie a estrutura para o seu site, Exemplo: mkdir -p var/www/solaris.com/html
+2.6- dê permissão para o usuário em todos os arquivos usando o comando: chown -R $USER:$USER /var/www/solaris.com/html
+2.7- Crie uma página HTML: nano /var/www/solaris.com/html/index.html
+2.8- Crie um novo server block(configuração que define como o Nginx deve responder a requisições para um determinado domínio ou IP) escrevendo o comando: nano /etc/nginx/sites-available/solaris.com
+Exemplo:
+![Exemplo configuraçao NGINX(Server-Block)](imagens/server-block.png)
+
+2.5- Crie um link simbólico escrevendo o código na pasta sites-enabled: ln -s /etc/nginx/sites-available/solaris.com /etc/nginx/sites-enabled/
+2.6- Teste se tem algum erro de configuração escrevendo o código: nginx -t
+2.7- reinicie o nginx escrevendo: systemctl reload nginx
+2.8- desative o site padrão com os códigos: rm /etc/nginx/sites-enabled/default e rm /etc/nginx/sites-available/default
+2.9- Dê permissão para o nginx acessar sua pasta digitando: chmod o+x /var/www/solaris.com/html 
+2.10- Garantir reinício automático do Nginx com o sistema: systemctl enable nginx
+2.11- teste se está funcionando digitando o ip no navegador 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# 3.Preparando o WebHook do Discord ----------------------------
+3.1- baixe e instale o discord, crie sua conta e entre nela
+3.2- Crie um servidor no discord clicando no + na barra lateral esquerda e escolha "Criar meu próprio Servidor"
+3.3- vá até um canal de texto do servidor(Exemplo #geral) e clique no ícone de engranagem ao lado do canal
+3.4- vá em integrações > Webhooks, depois clique em "Webhooks" dentro do menu de configurações do canal
+3.5- Clique em "Novo Webhook" e escolha um nome, escolha um canal onde ele deve postar e clique em copiar a URL do WebHook
+3.6- Salve as mudanças no Discord
+Exemplo da minha URL: https://discordapp.com/api/webhooks/1404538967042429088/5hdbuBoaKBRoSIZeuA5uwgkodLOw_p8OchEuhtxR5D9ooW9DWfxhu8AwDpW5UKtAkSsQ
+https://discordapp.com/api/webhooks/1405012566966669413/4HesWMBwCp-7M_q-fuk2Q8wibQNttpZoncD9pfhHE8NQJScwzem5tCdmHhfcifukvhjN
+imagem do webhook no discord
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+# 4.Script de Monitoramento + WebHook ---------------------------
+4.1- crie um script para monitorar o status do site utilizando o comando: nano /usr/local/bin/monitor_nginx.py
+4.2- crie o script python para monitorar quando o site está fora de ar e quando está funcionando
+foto script
+4.3- Dê permissão de execução utilizando o comando chmod +x /usr/local/bin/monitor_nginx.py
+4.4- Crie um arquivo de log, utilize o comando: touch /var/log/meu_script.log
+4.5- dê permissão de leitura e escrita para o arquivo meu_script.log, utilize o código: chmod 666 /var/log/meu_script.log
+4.5- Abra o visudo para configurar sudo sem senha para reiniciar o nginx, digite: visudo
+4.6 adicionar no finadl do arquivo a linha: usuario ALL=(ALL:ALL) NOPASSWD /usr/bin/systemctl restart nginx
+4.6- Faça que o script monitor_nginx.py rode a cada 1 minuto, Abra o editor do seu crontab pessoal, escrevendo o código: crontab -e
+4.8- escolha a opção do editor nano para abrir o arquivo
+4.9- escreva no final do arquivo que foi aberto: * * * * * /usr/bin/python3 /usr/local/bin/monitor_nginx.sh  
+foto arquivo do crontab -e
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+# 5. Testar a implementação ----------------------------------
+1. Teste manual para executar o script e a mensagem chegar no discord: python3  /usr/local/bin/monitor_solaris.py
+2. Pare o NGINX para ver se também chega mensagem no discord: systemctl stop nginx
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
