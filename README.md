@@ -42,19 +42,19 @@ Exemplo:
 
 ![Exemplo configuraçao NGINX(Server-Block)](imagens/server-block.png)
 
-2.5- Crie um link simbólico escrevendo o código na pasta sites-enabled: ln -s /etc/nginx/sites-available/solaris.com /etc/nginx/sites-enabled/
+2.9- Crie um link simbólico escrevendo o código na pasta sites-enabled: ln -s /etc/nginx/sites-available/solaris.com /etc/nginx/sites-enabled/
 
-2.6- Teste se tem algum erro de configuração escrevendo o código: nginx -t
+2.10- Teste se tem algum erro de configuração escrevendo o código: nginx -t
 
-2.7- reinicie o nginx escrevendo: systemctl reload nginx
+2.11- reinicie o nginx escrevendo: systemctl reload nginx
 
-2.8- desative o site padrão com os códigos: rm /etc/nginx/sites-enabled/default e rm /etc/nginx/sites-available/default
+2.12- desative o site padrão com os códigos: rm /etc/nginx/sites-enabled/default e rm /etc/nginx/sites-available/default
 
-2.9- Dê permissão para o nginx acessar sua pasta digitando: chmod o+x /var/www/solaris.com/html 
+2.13- Dê permissão para o nginx acessar sua pasta digitando: chmod o+x /var/www/solaris.com/html 
 
-2.10- Garantir reinício automático do Nginx com o sistema: systemctl enable nginx
+2.14- Garantir reinício automático do Nginx com o sistema: systemctl enable nginx
 
-2.11- teste se está funcionando digitando o ip no navegador 
+2.15- teste se está funcionando digitando o ip no navegador 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -96,15 +96,15 @@ https://discordapp.com/api/webhooks/1405012566966669413/4HesWMBwCp-7M_q-fuk2Q8wi
 
 4.5- dê permissão de leitura e escrita para o arquivo meu_script.log, utilize o código: chmod 666 /var/log/meu_script.log
 
-4.5- Abra o visudo para configurar sudo sem senha para reiniciar o nginx, digite: visudo
+4.6- Abra o visudo para configurar sudo sem senha para reiniciar o nginx, digite: visudo
 
-4.6 adicionar no finadl do arquivo a linha: usuario ALL=(ALL:ALL) NOPASSWD /usr/bin/systemctl restart nginx
+4.7 adicionar no finadl do arquivo a linha: usuario ALL=(ALL:ALL) NOPASSWD /usr/bin/systemctl restart nginx
 
-4.6- Faça que o script monitor_nginx.py rode a cada 1 minuto, Abra o editor do seu crontab pessoal, escrevendo o código: crontab -e
+4.8- Faça que o script monitor_nginx.py rode a cada 1 minuto, Abra o editor do seu crontab pessoal, escrevendo o código: crontab -e
 
-4.8- escolha a opção do editor nano para abrir o arquivo
+4.9- escolha a opção do editor nano para abrir o arquivo
 
-4.9- escreva no final do arquivo que foi aberto: * * * * * /usr/bin/python3 /usr/local/bin/monitor_nginx.sh 
+4.10- escreva no final do arquivo que foi aberto: * * * * * /usr/bin/python3 /usr/local/bin/monitor_nginx.sh 
 
 foto arquivo do crontab -e
 
@@ -115,9 +115,10 @@ foto arquivo do crontab -e
 
 # 5. Testar a implementação ----------------------------------
 
-1. Teste manual para executar o script e a mensagem chegar no discord: python3  /usr/local/bin/monitor_solaris.py
+5.1- Teste manual para executar o script e a mensagem chegar no discord: python3  /usr/local/bin/monitor_solaris.py
   
-2. Pare o NGINX para ver se também chega mensagem no discord: systemctl stop nginx
+5.2- Pare o NGINX para ver se também chega mensagem no discord: systemctl stop nginx
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
