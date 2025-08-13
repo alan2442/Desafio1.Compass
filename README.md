@@ -77,6 +77,8 @@ Exemplo:
 
 3.6- Salve as mudanças no Discord
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ![Exemplo webhook](imagens/webhook2.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -87,6 +89,8 @@ Exemplo:
 4.1- crie um script para monitorar o status do site utilizando o comando: nano /usr/local/bin/monitor_nginx.py
 
 4.2- altere o script monitor_nginx.py para monitorar quando o site está fora de ar e quando está funcionando
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Exemplo script](imagens/script1.png)
 ![Exemplo script](imagens/script2.png)
