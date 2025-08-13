@@ -1,5 +1,6 @@
 # Desafio1.Compass
 
+
 # ✅ Objetivo: Criar um servidor Nginx que hospeda uma página HTML e é monitorado via Python, com alertas automáticos via Discord.
 
 
@@ -10,7 +11,7 @@
 - Discord Webhooks
 - Cron
 
-# 1.Preparando o ambiente Linux -------------------------------
+# 1.Preparando o ambiente Linux 
 1.1- Instalar o WSL + Ubuntu digitando no cmd o comando: wsl --install -d Ubuntu
 
 1.2- Execute o Ubuntu com o comando: wsl -d Ubuntu
@@ -21,7 +22,7 @@
 
 
 
-# 2.Configura o servidor web NGINX ----------------------------
+# 2.Configura o servidor web NGINX 
 2.1- Instale o Nginx digitando o comando: apt-get install nginx -y
 
 2.2- Verifique se o Nginx está rodando escrevendo o comando: systemctl status nginx
@@ -59,7 +60,7 @@ Exemplo:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-# 3.Preparando o WebHook do Discord ----------------------------
+# 3.Preparando o WebHook do Discord 
 3.1- baixe e instale o discord, crie sua conta e entre nela
 
 3.2- Crie um servidor no discord clicando no + na barra lateral esquerda e escolha "Criar meu próprio Servidor"
@@ -79,7 +80,7 @@ Exemplo:
 
 
 
-# 4.Script de Monitoramento + WebHook ---------------------------
+# 4.Script de Monitoramento + WebHook 
 4.1- crie um script para monitorar o status do site utilizando o comando: nano /usr/local/bin/monitor_nginx.py
 
 4.2- altere o script monitor_nginx.py para monitorar quando o site está fora de ar e quando está funcionando
@@ -112,11 +113,17 @@ Exemplo:
 
 
 
-# 5. Testar a implementação ----------------------------------
+# 5. Testar a implementação 
 
-5.1- Teste manual para executar o script e a mensagem chegar no discord: python3  /usr/local/bin/monitor_solaris.py
+5.1- Você pode ver se seu site está no ar digitando o endereço de ip no navegador
+
+5.2- Você pode ver como é o código html da sua index digitando: curl http://localhost
+
+5.3- Teste manual para executar o script e a mensagem chegar no discord: python3  /usr/local/bin/monitor_solaris.py
   
-5.2- Pare o NGINX para ver se também chega mensagem no discord: systemctl stop nginx
+5.4- Pare o NGINX para ver se também chega mensagem no discord: systemctl stop nginx
+
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
