@@ -49,7 +49,8 @@ Exemplo:
 3.6- Salve as mudanças no Discord
 Exemplo da minha URL: https://discordapp.com/api/webhooks/1404538967042429088/5hdbuBoaKBRoSIZeuA5uwgkodLOw_p8OchEuhtxR5D9ooW9DWfxhu8AwDpW5UKtAkSsQ
 https://discordapp.com/api/webhooks/1405012566966669413/4HesWMBwCp-7M_q-fuk2Q8wibQNttpZoncD9pfhHE8NQJScwzem5tCdmHhfcifukvhjN
-imagem do webhook no discord
+![Exemplo webhook](imagens/webhook1.png)
+![Exemplo webhook](imagens/webhook2.png)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -57,7 +58,8 @@ imagem do webhook no discord
 # 4.Script de Monitoramento + WebHook ---------------------------
 4.1- crie um script para monitorar o status do site utilizando o comando: nano /usr/local/bin/monitor_nginx.py
 4.2- crie o script python para monitorar quando o site está fora de ar e quando está funcionando
-foto script
+![Exemplo script](imagens/script1.png)
+![Exemplo script](imagens/script2.png)
 4.3- Dê permissão de execução utilizando o comando chmod +x /usr/local/bin/monitor_nginx.py
 4.4- Crie um arquivo de log, utilize o comando: touch /var/log/meu_script.log
 4.5- dê permissão de leitura e escrita para o arquivo meu_script.log, utilize o código: chmod 666 /var/log/meu_script.log
