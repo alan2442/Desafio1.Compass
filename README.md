@@ -95,13 +95,17 @@ Exemplo:
 
 4.6- Abra o visudo para configurar sudo sem senha para reiniciar o nginx, digite: visudo
 
-4.7 adicionar no finadl do arquivo a linha: usuario ALL=(ALL:ALL) NOPASSWD /usr/bin/systemctl restart nginx
+4.7 adicione no final do arquivo a linha:
+
+ ![Exemplo  visudo](imagens/visudo.png)
 
 4.8- Faça que o script monitor_nginx.py rode a cada 1 minuto, Abra o editor do seu crontab pessoal, escrevendo o código: crontab -e
 
 4.9- escolha a opção do editor nano para abrir o arquivo
 
-4.10- escreva no final do arquivo que foi aberto: * * * * * /usr/bin/python3 /usr/local/bin/monitor_nginx.sh 
+4.10- escreva no final do arquivo que foi aberto:
+
+![Exemplo  crontab](imagens/crontab.png)
 
 foto arquivo do crontab -e
 
