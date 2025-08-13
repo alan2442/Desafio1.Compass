@@ -12,7 +12,9 @@
 
 # 1.Preparando o ambiente Linux -------------------------------
 1.1- Instalar o WSL + Ubuntu digitando no cmd o comando: wsl --install -d Ubuntu
+
 1.2- Execute o Ubuntu com o comando: wsl -d Ubuntu
+
 1.3- atualizar o sistema com os comandos: apt-get update && apt-get upgrade
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
