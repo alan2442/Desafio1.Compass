@@ -85,7 +85,7 @@ https://discordapp.com/api/webhooks/1405012566966669413/4HesWMBwCp-7M_q-fuk2Q8wi
 # 4.Script de Monitoramento + WebHook ---------------------------
 4.1- crie um script para monitorar o status do site utilizando o comando: nano /usr/local/bin/monitor_nginx.py
 
-4.2- crie o script python para monitorar quando o site está fora de ar e quando está funcionando
+4.2- altere o script monitor_nginx.py para monitorar quando o site está fora de ar e quando está funcionando
 
 ![Exemplo script](imagens/script1.png)
 ![Exemplo script](imagens/script2.png)
