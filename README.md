@@ -43,8 +43,6 @@ Exemplo:
 
 ![Exemplo configuraçao NGINX(Server-Block)](imagens/server-block.png)
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 2.9- Crie um link simbólico escrevendo o código na pasta sites-enabled: ln -s /etc/nginx/sites-available/solaris.com /etc/nginx/sites-enabled/
 
 2.10- Teste se tem algum erro de configuração escrevendo o código: nginx -t
