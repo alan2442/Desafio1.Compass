@@ -64,16 +64,13 @@ Exemplo:
 
 3.2- Crie um servidor no discord clicando no + na barra lateral esquerda e escolha "Criar meu próprio Servidor"
 
-3.3- vá até um canal de texto do servidor(Exemplo #geral) e clique no ícone de engranagem ao lado do canal
+3.3- vá até um canal de texto do servidor(Exemplo #geral) e clique no ícone de engrenagem ao lado do canal
 
 3.4- vá em integrações > Webhooks, depois clique em "Webhooks" dentro do menu de configurações do canal
 
 3.5- Clique em "Novo Webhook" e escolha um nome, escolha um canal onde ele deve postar e clique em copiar a URL do WebHook
 
 3.6- Salve as mudanças no Discord
-
-Exemplo da minha URL: https://discordapp.com/api/webhooks/1404538967042429088/5hdbuBoaKBRoSIZeuA5uwgkodLOw_p8OchEuhtxR5D9ooW9DWfxhu8AwDpW5UKtAkSsQ
-https://discordapp.com/api/webhooks/1405012566966669413/4HesWMBwCp-7M_q-fuk2Q8wibQNttpZoncD9pfhHE8NQJScwzem5tCdmHhfcifukvhjN
 
 ![Exemplo webhook](imagens/webhook1.png)
 ![Exemplo webhook](imagens/webhook2.png)
