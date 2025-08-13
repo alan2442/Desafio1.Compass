@@ -41,8 +41,6 @@
 
 Exemplo:
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ![Exemplo configuraçao NGINX(Server-Block)](imagens/server-block.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -73,13 +71,13 @@ Exemplo:
 
 ![Exemplo webhook](imagens/engrenagem.png)
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 3.4- vá em integrações > Webhooks, depois clique em "Webhooks" dentro do menu de configurações do canal
 
 3.5- Clique em "Novo Webhook" e escolha um nome, escolha um canal onde ele deve postar e clique em copiar a URL do WebHook
 
 3.6- Salve as mudanças no Discord
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Exemplo webhook](imagens/webhook2.png)
 
@@ -91,8 +89,6 @@ Exemplo:
 4.1- crie um script para monitorar o status do site utilizando o comando: nano /usr/local/bin/monitor_nginx.py
 
 4.2- altere o script monitor_nginx.py para monitorar quando o site está fora de ar e quando está funcionando
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ![Exemplo script](imagens/script1.png)
 ![Exemplo script](imagens/script2.png)
