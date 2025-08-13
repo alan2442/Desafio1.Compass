@@ -65,7 +65,9 @@ Exemplo:
 
 3.2- Crie um servidor no discord clicando no + na barra lateral esquerda e escolha "Criar meu próprio Servidor"
 
-3.3- vá até um canal de texto do servidor(Exemplo #geral) e clique no ícone de engrenagem ao lado do canal
+3.3- vá até um canal de texto do servidor(Exemplo #geral) e clique no ícone de engrenagem ao lado do canal:
+
+![Exemplo webhook](imagens/webhook1.png)
 
 3.4- vá em integrações > Webhooks, depois clique em "Webhooks" dentro do menu de configurações do canal
 
@@ -73,7 +75,6 @@ Exemplo:
 
 3.6- Salve as mudanças no Discord
 
-![Exemplo webhook](imagens/webhook1.png)
 ![Exemplo webhook](imagens/webhook2.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
