@@ -67,7 +67,7 @@ Exemplo:
 
 3.3- vá até um canal de texto do servidor(Exemplo #geral) e clique no ícone de engrenagem ao lado do canal:
 
-![Exemplo webhook](imagens/webhook1.png)
+![Exemplo webhook](imagens/engrenagem.png)
 
 3.4- vá em integrações > Webhooks, depois clique em "Webhooks" dentro do menu de configurações do canal
 
