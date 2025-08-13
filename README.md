@@ -4,7 +4,7 @@
 # ✅ Objetivo: Criar um servidor Nginx que hospeda uma página HTML e é monitorado via Python, com alertas automáticos via Discord.
 
 
-# 📦 Tecnologias
+# 📦 Tecnologias 
 - Ubuntu (WSL ou nativo)
 - Nginx
 - Python 3 
@@ -22,7 +22,7 @@
 
 
 
-# 2.Configura o servidor web NGINX 
+# 2.Configurando o servidor web NGINX 
 2.1- Instale o Nginx digitando o comando: apt-get install nginx -y
 
 2.2- Verifique se o Nginx está rodando escrevendo o comando: systemctl status nginx
@@ -114,7 +114,7 @@ Exemplo:
 
 
 
-# 5. Testar a implementação 
+# 5. Testando a implementação 
 
 5.1- Você pode ver se seu site está no ar digitando o endereço de ip no navegador
 
@@ -123,6 +123,8 @@ Exemplo:
 5.3- Teste manual para executar o script e a mensagem chegar no discord: python3  /usr/local/bin/monitor_solaris.py
   
 5.4- Pare o NGINX para ver se também chega mensagem no discord: systemctl stop nginx
+
+5.5- Após para o NGINX espere 1 minuto para receber a mensagem que ele está fora do ar e está tentando reiniciar
 
 
 
