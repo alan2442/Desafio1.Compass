@@ -120,11 +120,15 @@ Exemplo:
 
 5.2- Você pode ver como é o código html da sua index digitando: curl http://localhost
 
-5.3- Teste manual para executar o script e a mensagem chegar no discord: python3  /usr/local/bin/monitor_solaris.py
-  
-5.4- Pare o NGINX para ver se também chega mensagem no discord: systemctl stop nginx
+5.3- Para verificar o seu arquivo .logo digite: cat /var/log/meu_script.log
 
-5.5- Após para o NGINX espere 1 minuto para receber a mensagem que ele está fora do ar e está tentando reiniciar
+5.4- Teste manual para executar o script e a mensagem chegar no discord: python3  /usr/local/bin/monitor_solaris.py
+  
+5.5- Pare o NGINX para ver se também chega mensagem no discord: systemctl stop nginx
+
+5.6- Após para o NGINX espere 1 minuto para receber a mensagem que ele está fora do ar e está tentando reiniciar
+
+
 
 
 
