@@ -69,8 +69,6 @@ Exemplo:
 
 ![Exemplo webhook](imagens/engrenagem.png)
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 3.4- vá em integrações > Webhooks, depois clique em "Webhooks" dentro do menu de configurações do canal
 
 3.5- Clique em "Novo Webhook" e escolha um nome, escolha um canal onde ele deve postar e clique em copiar a URL do WebHook
