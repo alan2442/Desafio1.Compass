@@ -37,7 +37,9 @@
 2.7- Crie uma página HTML: nano /var/www/solaris.com/html/index.html
 
 2.8- Crie um novo server block(configuração que define como o Nginx deve responder a requisições para um determinado domínio ou IP) escrevendo o comando: nano /etc/nginx/sites-available/solaris.com
+
 Exemplo:
+
 ![Exemplo configuraçao NGINX(Server-Block)](imagens/server-block.png)
 
 2.5- Crie um link simbólico escrevendo o código na pasta sites-enabled: ln -s /etc/nginx/sites-available/solaris.com /etc/nginx/sites-enabled/
